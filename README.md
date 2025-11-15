@@ -1,4 +1,4 @@
-# Bug Bounty
+# Web Application Penetration Testing
 
 Overview
 ---------
