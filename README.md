@@ -316,12 +316,14 @@ OSINT Framework
 $ ffuf -w <wordlist>:FUZZ        # assign wordlist to a keyword
 $ ffuf -w <wordlist> -u http://<Domain Name>/FUZZ
 $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/FUZZ
+$ gobuster dir -u http://<Domain Name>/ -w <wordlist>
 ```
 
 - Extension Fuzzing
 
 ```
 $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/blog/indexFUZZ
+$ gobuster dir -u http://<Domain Name>/ -w <wordlist> -x .php,.html
 ```
 
 - Page Fuzzing
@@ -340,6 +342,7 @@ $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/FUZZ -recursion -recursion-dep
 
 ```
 $ ffuf -w <wordlist>:FUZZ -u https://FUZZ.<Domain Name>
+$ gobuster dns -d http://<Domain Name>/ -w <wordlist>
 ```
 
 - VHOST Fuzzing
