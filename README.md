@@ -317,6 +317,8 @@ $ ffuf -w <wordlist>:FUZZ        # assign wordlist to a keyword
 $ ffuf -w <wordlist> -u http://<Domain Name>/FUZZ
 $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/FUZZ
 $ gobuster dir -u http://<Domain Name>/ -w <wordlist>
+$ wenum -c -w <wordlist> --hc 404 -u http://<Domain Name>/FUZZ
+$ feroxbuster -u http://<Domain Name>/ -w <wordlist>
 ```
 
 - Extension Fuzzing
@@ -324,6 +326,7 @@ $ gobuster dir -u http://<Domain Name>/ -w <wordlist>
 ```
 $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/blog/indexFUZZ
 $ gobuster dir -u http://<Domain Name>/ -w <wordlist> -x .php,.html
+$ feroxbuster -u http://<Domain Name>/ -w <wordlist> -x .php,.html
 ```
 
 - Page Fuzzing
@@ -367,6 +370,7 @@ $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/admin/admin.php?FUZZ=key -fs 9
 
 ```
 $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs 900
+$ wenum -c -w <wordlist> -d 'username=FUZZ&password=secret' -u http://<Domain Name>
 ```
 
 - Parameter Value Fuzzing
