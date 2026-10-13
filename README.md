@@ -345,7 +345,7 @@ $ ffuf -w <wordlist>:FUZZ -u http://<Domain Name>/FUZZ -recursion -recursion-dep
 
 ```
 $ ffuf -w <wordlist>:FUZZ -u https://FUZZ.<Domain Name>
-$ gobuster dns -d http://<Domain Name>/ -w <wordlist>
+$ gobuster dns --domain http://<Domain Name>/ -w <wordlist>
 ```
 
 - VHOST Fuzzing
